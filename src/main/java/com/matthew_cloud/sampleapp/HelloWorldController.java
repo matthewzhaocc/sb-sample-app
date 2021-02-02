@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloWorldController {
-    @RequestMapping("/")
+    @RequestMapping("/api")
     public String index() {
         return "fuck you until you break \n";
     }
