@@ -5,8 +5,10 @@ phases:
     commands:
       - yum update -y
       - yum install wget -y
-      - wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
-      - yum install -y apache-maven default-jdk
+      - wget https://apache.osuosl.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+      - tar -xvf apache-maven-3.6.3-bin.tar.gz
+      - mv apache-maven-3.6.3/bin/* /usr/bin
+      - yum install -y default-jdk
   build:
     commands: 
     - mvn install
