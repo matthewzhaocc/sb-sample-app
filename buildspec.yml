@@ -3,6 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
+      - rm -rf /etc/apt/sources.list.d/*
+      - apt update -y
       - apt install maven default-jdk -y
   build:
     commands: 
