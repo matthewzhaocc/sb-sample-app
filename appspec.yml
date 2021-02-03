@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: pom.xml
+    destination: /test
+hooks:
+  BeforeInstall:
+    - location: xd.sh
+  AfterInstall:
+    - location: xd.sh
+  ApplicationStart:
+    - location: xd.sh
+  ValidateService:
+    - location: xd.sh
