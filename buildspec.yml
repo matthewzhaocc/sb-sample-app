@@ -3,8 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt update -y
-      - apt install -y maven default-jdk
+      - sudo apt update -y
+      - sudo apt install -y maven default-jdk
   build:
     command: mvn install
 artifacts:
