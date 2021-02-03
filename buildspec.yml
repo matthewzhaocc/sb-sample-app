@@ -3,12 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - yum update -y
-      - yum install wget -y
-      - wget https://apache.osuosl.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
-      - tar -xvf apache-maven-3.6.3-bin.tar.gz
-      - mv apache-maven-3.6.3/bin/* /usr/bin
-      - amazon-linux-extras install java-openjdk11
+      - apt update -y
+      - apt install maven default-jdk -y
   build:
     commands: 
     - mvn install
