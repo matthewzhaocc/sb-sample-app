@@ -8,7 +8,6 @@
 		<version>2.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<packaging>war</packaging>
 	<groupId>com.matthew_cloud</groupId>
 	<artifactId>sample-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>

@@ -1,0 +1,10 @@
+[Unit]
+Description=SB Sample App
+[Service]
+Type=simple
+Restart=always
+RestartSec=20
+ExecStart=/usr/bin/java -jar /app/app.jar
+
+[Install]
+WantedBy=multi-user.target
