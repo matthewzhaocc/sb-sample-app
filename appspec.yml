@@ -9,6 +9,6 @@ files:
 
 hooks:
   Install:
-    - location: ./install.sh
+    - location: ./startstuff.sh
   AfterInstall:
     - location: ./xd.sh

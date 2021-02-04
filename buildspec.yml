@@ -15,5 +15,5 @@ artifacts:
     - appspec.yml
     - scripts/*
     - buildspec.yml
-    - install.sh
+    - startstuff.sh
     - xd.sh
