@@ -3,3 +3,5 @@ os: linux
 hooks:
   Install:
     - location: scripts/Install.sh
+      timeout: 180
+      runas: root
