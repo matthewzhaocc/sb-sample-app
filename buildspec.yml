@@ -12,3 +12,4 @@ phases:
 artifacts:
   files:
     - target/sample-app-0.0.1-SNAPSHOT.war
+    - appspec.yml
