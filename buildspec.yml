@@ -14,3 +14,5 @@ artifacts:
     - target/sample-app-0.0.1-SNAPSHOT.jar
     - appspec.yml
     - scripts/*
+    - buildspec.yml
+    - Install.sh

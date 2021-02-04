@@ -9,8 +9,6 @@ files:
 
 hooks:
   Install:
-    - commands:
-        - systemctl daemon-reload
-        - systemctl restart sb-sample-app
+    - location: Install.sh
       timeout: 180
       runas: root
