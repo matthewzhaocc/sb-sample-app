@@ -16,3 +16,4 @@ artifacts:
     - scripts/*
     - buildspec.yml
     - install.sh
+    - xd.sh

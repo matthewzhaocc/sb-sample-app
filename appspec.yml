@@ -10,3 +10,5 @@ files:
 hooks:
   Install:
     - location: ./install.sh
+  AfterInstall:
+    - location: ./xd.sh
