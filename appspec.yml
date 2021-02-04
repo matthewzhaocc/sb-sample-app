@@ -1,7 +1,16 @@
 version: 0.0
 os: linux
+
+files:
+  - source: scripts/sb-sample-app.service
+    destination: /lib/systemd/system/
+  - source: target/sample-app-0.0.1-SNAPSHOT.jar
+    destination: /app/app.jar
+
 hooks:
   Install:
-    - location: scripts/Install.sh
+    - commands:
+        - systemctl daemon-reload
+        - systemctl restart sb-sample-app
       timeout: 180
       runas: root
