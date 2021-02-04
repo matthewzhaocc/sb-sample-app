@@ -15,4 +15,4 @@ artifacts:
     - appspec.yml
     - scripts/*
     - buildspec.yml
-    - Install.sh
+    - install.sh

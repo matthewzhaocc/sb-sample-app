@@ -9,4 +9,4 @@ files:
 
 hooks:
   Install:
-    - location: ./Install.sh
+    - location: ./install.sh
