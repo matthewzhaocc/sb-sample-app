@@ -5,10 +5,8 @@ files:
   - source: scripts/sb-sample-app.service
     destination: /lib/systemd/system/
   - source: target/sample-app-0.0.1-SNAPSHOT.jar
-    destination: /app/app.jar
+    destination: /app
 
 hooks:
   Install:
-    - location: Install.sh
-      timeout: 180
-      runas: root
+    - location: ./Install.sh
