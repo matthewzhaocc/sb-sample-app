@@ -8,7 +8,5 @@ files:
     destination: /app
 
 hooks:
-  Install:
-    - location: ./startstuff.sh
   AfterInstall:
-    - location: ./xd.sh
+    - location: ./startstuff.sh
