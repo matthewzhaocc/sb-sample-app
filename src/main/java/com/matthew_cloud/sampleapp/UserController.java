@@ -1,6 +1,7 @@
 package com.matthew_cloud.sampleapp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,5 +30,27 @@ public class UserController {
     @GetMapping(path="/all")
     public @ResponseBody Iterable<User> getAllUsers() {
         return userRepository.findAll();
+    }
+
+    @DeleteMapping(path = "/delete")
+    public @ResponseBody String deleteUser(@RequestParam String name, @RequestParam String email) {
+        User u = new User();
+        u.setName(name);
+        u.setEmail(email);
+        userRepository.delete(u);
+        return "deleted";
+    }
+
+    @PostMapping(path = "/update")
+    public @ResponseBody String updateUser(@RequestParam String oldName, @RequestParam String newName, @RequestParam String oldEmail, @RequestParam String newEmail){
+        User old = new User();
+        User newUser = new User();
+        old.setEmail(oldEmail);
+        old.setName(oldName);
+        newUser.setEmail(newEmail);
+        newUser.setName(newName);
+        userRepository.delete(old);
+        userRepository.save(newUser);
+        return "updated";
     }
 }
